@@ -1,0 +1,49 @@
+<!-- <div>
+    <h2>{{msg}}</h2>
+</div> -->
+<div class="container">
+<h2>UserCreate Form</h2>
+    <form class="form" [formGroup]="form" (ngSubmit)="registerNow()">
+        <div class="form-group">
+            <label for="exampleInputName">Name</label>
+             <input type="text" class="form-control" name="name"  formControlName="name"  aria-describedby="emailHelp"
+            placeholder="name" >
+                <span *ngIf="submitted && form.controls.name.errors"> 
+                <span *ngIf="submitted &&form.controls.name.errors.required">Name required<sup>*</sup></span>
+                <span *ngIf="form.controls.name.errors.pattern">Invalid Name</span> 
+                </span> 
+        </div>
+    
+        <div class="form-group">
+             <label for="exampleInputEmail1">Email </label>
+            <input type="email" class="form-control"  formControlName="email"  name="email" aria-describedby="emailHelp"
+             placeholder="Enter email" >
+                <span *ngIf="submitted && form.controls.email.errors"> 
+                <span *ngIf="submitted &&form.controls.email.errors.required"> email required<sup>*</sup></span>
+                <span *ngIf="form.controls.email.errors.pattern">Invalid Email </span> 
+                 </span>
+         </div>
+        <div class="form-group">
+            <label for="exampleInputPhonenumber" >phone Number</label> 
+            <input type="number" class="form-control" formControlName="phone" name="phone" placeholder="phone Number">
+                <span *ngIf="submitted && form.controls.phone.errors"> 
+                <span *ngIf="submitted &&form.controls.phone.errors.required"> phoneNumber  required<sup>*</sup></span>
+                <span *ngIf="form.controls.phone.errors.pattern">Invalid phoneNumber</span> 
+             </span>
+           
+        </div>
+
+        <div class="form-group password">
+             <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control"   formControlName="password" name="password"   placeholder="Password" >
+                <span *ngIf="submitted && form.controls.password.errors"> 
+                <span *ngIf="submitted && form.controls.password.errors.required"> password required<sup>*</sup></span>
+                <span *ngIf="form.controls.password.errors.pattern">Invalid Password </span> 
+            </span>
+        </div> 
+         <div class="form-group">
+                <button  type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+

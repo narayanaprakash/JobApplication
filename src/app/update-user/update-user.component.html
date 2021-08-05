@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>userUpdate Form</h2>
+
+    <form class="form" (ngSubmit)="registerUpdateNow()">
+        <div class="form-group">
+            <label for="exampleInputid">Id</label>
+            <input type="text" class="form-control" name="id" readonly [(ngModel)]="user.id"
+                placeholder="id">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName">Name</label>
+            <input type="text" class="form-control" name="firstName"  [(ngModel)]="user.name" 
+                placeholder="Enter name">
+        </div>    
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" [(ngModel)]="user.email" name="email" 
+                placeholder="Enter email">
+               </div>
+               <div class="form-group">
+               
+                <label for="exampleInputPhonenumber">phone Number</label>
+                <input type="number" class="form-control"  [(ngModel)]="user.phone" name="phoneNumber" placeholder="phone Number">
+           
+            </div>
+        <div class="form-group password">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" [(ngModel)]="user.password" name="password"  placeholder="Password" >
+        </div> 
+        <div class="form-group">
+            <button  type="submit" class="btn btn-primary">Submit</button>
+         </div>
+         
+    </form>  
+</div>

@@ -1,0 +1,28 @@
+h2{
+    margin-top: 10px;
+    color: rgb(7, 7, 109);
+}
+table{
+    margin-top: 20px;
+}
+a.delete {
+    cursor: pointer;
+    color: #E34724;
+}
+a.edit {
+    cursor: pointer;
+    color: #FFC107;
+}
+button{
+    cursor: pointer;
+    float:right;
+   } 
+h2{
+    display: inline;
+}
+.main{
+					
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
